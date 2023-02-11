@@ -28,6 +28,7 @@ namespace CRUDNET7MVC.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public async Task<IActionResult> Crear(Contacto contacto)
         {
             if(ModelState.IsValid)
@@ -39,7 +40,37 @@ namespace CRUDNET7MVC.Controllers
             return View();
         }
 
-        
+        [HttpGet]
+        public IActionResult Editar(int? id)
+        {
+            if(id == null)
+            {
+                return NotFound();
+            }
+
+            var contacto = _contexto.Contactos.Find(id);
+
+            if (contacto == null)
+            {
+                return NotFound();
+            }
+
+            return View(contacto);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Editar(Contacto contacto)
+        {
+            if (ModelState.IsValid)
+            {
+                _contexto.Update(contacto);
+                await _contexto.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
+            }
+            return View();
+        }
+
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
