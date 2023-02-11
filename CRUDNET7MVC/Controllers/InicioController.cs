@@ -18,7 +18,7 @@ namespace CRUDNET7MVC.Controllers
         [HttpGet]
         public async Task<IActionResult> Index()
         {
-            return View(await _contexto.Contacto.ToListAsync());
+            return View(await _contexto.Contactos.ToListAsync());
         }
 
         public IActionResult Privacy()

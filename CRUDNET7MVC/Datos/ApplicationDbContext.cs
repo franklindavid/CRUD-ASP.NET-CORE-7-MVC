@@ -9,7 +9,7 @@ namespace CRUDNET7MVC.Datos
 
         } 
 
-        public DbSet<Contacto> Contacto { get; set; }
+        public DbSet<Contacto> Contactos { get; set; }
         
     }
 }
