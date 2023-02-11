@@ -58,6 +58,24 @@ namespace CRUDNET7MVC.Controllers
             return View(contacto);
         }
 
+        [HttpGet]
+        public IActionResult Detalle(int? id)
+        {
+            if(id == null)
+            {
+                return NotFound();
+            }
+
+            var contacto = _contexto.Contactos.Find(id);
+
+            if (contacto == null)
+            {
+                return NotFound();
+            }
+
+            return View(contacto);
+        }
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Editar(Contacto contacto)
