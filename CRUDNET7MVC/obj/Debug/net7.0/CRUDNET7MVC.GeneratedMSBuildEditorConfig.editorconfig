@@ -16,6 +16,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = F:\Proyectos_web\.net\CRUDNET7MVC\CRUDNET7MVC
 build_property._RazorSourceGeneratorDebug = 
 
+[F:/Proyectos_web/.net/CRUDNET7MVC/CRUDNET7MVC/Views/Inicio/Crear.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5pY2lvXENyZWFyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [F:/Proyectos_web/.net/CRUDNET7MVC/CRUDNET7MVC/Views/Inicio/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5pY2lvXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
